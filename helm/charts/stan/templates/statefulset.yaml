@@ -92,6 +92,9 @@ spec:
   - metadata:
       name: {{ template "stan.name" . }}-pvc
     spec:
+      {{- if .Values.store.file.storageClassName }}
+      storageClassName: "{{.Values.store.file.storageClassName}}"
+      {{ end }}
       accessModes:
       - ReadWriteOnce
       resources:

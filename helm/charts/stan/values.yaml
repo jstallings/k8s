@@ -57,6 +57,7 @@ store:
   # File storage settings.
   # 
   file:
+    # storageClassName: 
     path: /data/stan/store
     storageSize: 1Gi
 
